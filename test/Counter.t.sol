@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.24;
 
 import {Test} from "forge-std/Test.sol";
 import {Counter} from "../src/Counter.sol";
@@ -14,11 +14,11 @@ contract CounterTest is Test {
 
     function test_Increment() public {
         counter.increment();
-        assertEq(counter.getValue(), 1);
+        assertEq(counter.getNumber(), 1);
     }
 
     function testFuzz_SetNumber(uint8 x) public {
         counter.setNumber(x);
-        assertEq(counter.getValue(), x);
+        assertEq(counter.getNumber(), x);
     }
 }
