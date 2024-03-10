@@ -18,7 +18,7 @@ contract CounterScript is Script {
         counter.setNumber(99);
         console.log(counter.getValue());
 
-        counter.increment(100);
+        counter.increment();
         console.log(counter.getValue());
 
         vm.broadcast();
