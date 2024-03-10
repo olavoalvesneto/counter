@@ -10,18 +10,17 @@ contract CounterScript is Script {
     function setUp() public {}
 
     function run() public {
-        vm.broadcast();
+        vm.broadcast(0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80);
 
         console.log("ADDRESS :: ", address(counter));
 
         counter = new Counter;
         counter.setNumber(99);
-
         console.log(counter.getValue());
 
         counter.increment(100);
-
         console.log(counter.getValue());
 
+        vm.broadcast();
     }
 }
