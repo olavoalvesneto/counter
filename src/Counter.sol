@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.24;
 
 contract Counter {
-    uint8 number;
+    uint8 public number;
 
     function setNumber(uint8 newNumber) public {
         number = newNumber;
@@ -12,7 +12,7 @@ contract Counter {
         number++;
     }
 
-    function getValue() external returns(uint8){
+    function getNumber() public view returns(uint8){
         return number;
     }
 }
