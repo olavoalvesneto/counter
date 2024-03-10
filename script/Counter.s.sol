@@ -14,7 +14,7 @@ contract CounterScript is Script {
 
         console.log("ADDRESS :: ", address(counter));
 
-        counter = new Counter;
+        counter = new Counter();
         counter.setNumber(99);
         console.log(counter.getValue());
 
